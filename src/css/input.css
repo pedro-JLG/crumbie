@@ -24,11 +24,11 @@ html {
     }
 
     .cart-item {
-        @apply w-full p-2 bg-white rounded-2xl outline-1 -outline-offset-1 outline-orange-900/10 flex items-center hover:bg-white/80 hover:outline-offset-0 transition-all duration-300 ease-in-out;
+        @apply w-full p-2 bg-white rounded-2xl outline-1 -outline-offset-1 outline-orange-900/10 flex items-stretch hover:bg-white/80 hover:outline-offset-0 transition-all duration-300 ease-in-out;
     }
 
     .cart-item-inner {
-        @apply w-full flex-1 flex justify-between items-start md:items-center justify-end
+        @apply w-full flex-1 flex justify-between;
     }
 
     /* Sistema Dinámico de Cantidades */
