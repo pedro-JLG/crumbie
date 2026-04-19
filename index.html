@@ -14,198 +14,224 @@
 </head>
 
 <body class="font-body">
-    <header>
-        <nav class="w-full flex justify-between items-center bg-amber-950 h-20 ">
-            <div class="container mx-auto flex justify-between items-center">
+    <header class="fixed w-full top-0 z-40">
+        <nav class="w-full bg-amber-950 h-20 flex items-center">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+
                 <div class="flex items-center gap-2">
-                    <img src="src/img/logo.svg" alt="">
+                    <img src="src/img/logo.svg" alt="Logo" class="h-8">
                 </div>
-                <div>
-                    <ul class="flex items-center gap-0.5">
+
+                <div class="flex items-center gap-4">
+
+                    <ul class="hidden md:flex items-center gap-2">
                         <li><a class="text-white text-lg font-medium px-6 py-3 rounded-full hover:bg-amber-900 transition-all duration-300"
                                 href="#productos">Productos</a></li>
                         <li><a class="text-white text-lg font-medium px-6 py-3 rounded-full hover:bg-amber-900 transition-all duration-300"
                                 href="#como-comprar">Cómo Comprar</a></li>
-                        <li><a class="text-white text-lg font-medium rounded-full ml-3 hover:bg-amber-900 p-3 block transition-all duration-300"
-                                href="#"><img src="./src/img/carrito.svg" alt=""></a></li>
                     </ul>
+
+                    <div class="flex items-center gap-2">
+                        <a class="text-white rounded-full hover:bg-amber-900 p-3 block transition-all duration-300"
+                            href="#">
+                            <img src="./src/img/carrito.svg" alt="Carrito" class="w-6 h-6">
+                        </a>
+
+                        <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
-        
-        
-        <aside
-        class="w-auto sm:w-xl h-full px-8 sm:px-10 pt-6 pb-7 bg-orange-50 rounded-tl-3xl rounded-bl-3xl flex flex-col items-end overflow-hidden shadow-2xl fixed translate-x-full top-0 right-0 z-50 transition-all duration-300 ease-in-out" data-state="closed">
-        
-        <button
-            class="w-10 h-10 flex justify-center items-center rounded-full outline-1 -outline-offset-1 outline-orange-950/40 mb-[-6px] hover:bg-orange-100 transition-colors cursor-pointer shrink-0">
-            <div class="w-4 h-4 relative flex justify-center items-center shrink-0">
-                <div class="absolute w-4 h-0.5 bg-amber-950 rotate-45 rounded-full"></div>
-                <div class="absolute w-4 h-0.5 bg-amber-950 -rotate-45 rounded-full"></div>
-            </div>
-        </button>
 
-        <div class="w-full flex-1 flex flex-col items-start gap-6">
-            <h2 class="text-amber-950 text-3xl font-semibold font-header uppercase leading-9">
-                Resumen del Pedido
-            </h2>
-
-            
-            <div class="w-full h-auto max-h-64 bg-orange-500/10 rounded-3xl outline-1 -outline-offset-1 outline-orange-900/10 overflow-hidden">
-                <div class="h-full p-2 pr-2 flex flex-col gap-2 overflow-y-auto custom-scrollbar">
-                    
-                    <div class="cart-item">
-                        <div class="cart-item-inner">
-                            
-                            <div class="w-28 shrink-0 rounded-xl overflow-hidden">
-                                <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            
-                            <div class="w-full flex flex-col pl-4 pr-2.5 items-start gap-1  md:flex-row justify-between">
-                                <div class="flex flex-col">
-                                    <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La Bombástica Choco-Chip</h3>
-                                    <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
-                                </div>
-                                
-                                <div class="js-quantity-control qty-wrapper" data-state="active">
-                                <div class="qty-inner">
-                                    
-                                    <div class="js-button-less qty-btn qty-btn-less">
-                                        <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                    </div>
-                                    
-                                    <div class="js-quantity-count qty-count">
-                                        <span class="qty-count-text">1</span>
-                                    </div>
-                                    
-                                    <div class="js-button-add qty-btn qty-btn-add">
-                                        <div class="relative flex items-center justify-center">
-                                            <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                            <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    
-                    <div class="cart-item">
-                        <div class="cart-item-inner">
-                            
-                            <div class="w-28 shrink-0 rounded-xl overflow-hidden">
-                                <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            
-                            <div class="w-full flex flex-col pl-4 pr-2.5 items-start gap-1  md:flex-row justify-between">
-                                <div class="flex flex-col">
-                                    <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La Bombástica Choco-Chip</h3>
-                                    <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
-                                </div>
-                                
-                                <div class="js-quantity-control qty-wrapper" data-state="active">
-                                <div class="qty-inner">
-                                    
-                                    <div class="js-button-less qty-btn qty-btn-less">
-                                        <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                    </div>
-                                    
-                                    <div class="js-quantity-count qty-count">
-                                        <span class="qty-count-text">1</span>
-                                    </div>
-                                    
-                                    <div class="js-button-add qty-btn qty-btn-add">
-                                        <div class="relative flex items-center justify-center">
-                                            <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                            <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    
-                    <div class="cart-item">
-                        <div class="cart-item-inner">
-                            
-                            <div class="w-28 shrink-0 rounded-xl overflow-hidden">
-                                <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            
-                            <div class="w-full flex flex-col pl-4 pr-2.5 items-start gap-1  md:flex-row justify-between">
-                                <div class="flex flex-col">
-                                    <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La Bombástica Choco-Chip</h3>
-                                    <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
-                                </div>
-                                
-                                <div class="js-quantity-control qty-wrapper" data-state="active">
-                                <div class="qty-inner">
-                                    
-                                    <div class="js-button-less qty-btn qty-btn-less">
-                                        <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                    </div>
-                                    
-                                    <div class="js-quantity-count qty-count">
-                                        <span class="qty-count-text">1</span>
-                                    </div>
-                                    
-                                    <div class="js-button-add qty-btn qty-btn-add">
-                                        <div class="relative flex items-center justify-center">
-                                            <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
-                                            <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="w-full flex flex-col flex-1 justify-end gap-8">
-                <div class="w-full flex flex-col items-end px-10 py-6 shadow-sm bg-white/70 rounded-3xl">
-                    
-                    <div class="w-full flex flex-col gap-4">
-                        <div class="w-full flex flex-col gap-2">
-                            <div class="w-full flex justify-between items-start">
-                                <span class="text-neutral-800 text-md font-semibold">Subtotal</span>
-                                <span class="text-neutral-800 text-md font-semibold">Gs 48.000</span>
-                            </div>
-                            <div class="w-full flex justify-between items-start">
-                                <span class="text-neutral-800 text-md font-semibold">Delivery</span>
-                                <span class="text-neutral-800 text-md font-semibold">Gs 15.000</span>
-                            </div>
-                        </div>
-                        <div class="w-full pt-6 border-t border-orange-400/20 flex justify-between items-start">
-                            <span class="text-neutral-800 text-xl font-bold">TOTAL</span>
-                            <span class="text-neutral-800 text-xl font-bold">Gs 63.000</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-primary text-2xl">Enviar Pedido</button>
-            </div>
+        <div id="mobile-menu" class="hidden bg-amber-900 w-full py-4 px-6 md:hidden">
+            <a href="#productos" class="block text-white py-2 border-b border-amber-800">Productos</a>
+            <a href="#como-comprar" class="block text-white py-2">Cómo Comprar</a>
         </div>
+
+        <aside
+            class="w-auto sm:w-xl h-full px-4 sm:px-10 pt-6 pb-7 bg-orange-50 rounded-tl-3xl rounded-bl-3xl flex flex-col items-end overflow-hidden shadow-2xl fixed translate-x-full top-0 right-0 z-50 transition-all duration-300 ease-in-out"
+            data-state="closed">
+
+            <button
+                class="w-10 h-10 flex justify-center items-center rounded-full outline-1 -outline-offset-1 outline-orange-950/40 mb-[-12px]  hover:bg-orange-100 transition-colors cursor-pointer shrink-0">
+                <div class="w-4 h-4 relative flex justify-center items-center shrink-0">
+                    <div class="absolute w-4 h-0.5 bg-amber-950 rotate-45 rounded-full"></div>
+                    <div class="absolute w-4 h-0.5 bg-amber-950 -rotate-45 rounded-full"></div>
+                </div>
+            </button>
+
+            <div class="w-full flex-1 flex flex-col items-start gap-6">
+                <h2 class="text-amber-950 text-3xl font-semibold font-header uppercase leading-9">
+                    Resumen del Pedido
+                </h2>
+
+
+                <div
+                    class="w-full h-auto max-h-64 bg-orange-500/10 rounded-3xl outline-1 -outline-offset-1 outline-orange-900/10 overflow-hidden">
+                    <div class="h-full p-2 pr-2 flex flex-col gap-2 overflow-y-auto custom-scrollbar">
+
+                        <div class="cart-item">
+                            <div class="cart-item-inner">
+
+                                <div class="w-20 sm:w-28 h-full shrink-0 rounded-xl overflow-hidden">
+                                    <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
+                                        class="w-full h-full object-cover">
+                                </div>
+
+                                <div
+                                    class="w-full flex flex-col pl-4 pr-2.5 items-end sm:items-center gap-1  sm:flex-row justify-between">
+                                    <div class="flex flex-col w-full sm:w-auto">
+                                        <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La
+                                            Bombástica Choco-Chip</h3>
+                                        <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
+                                    </div>
+
+                                    <div class="js-quantity-control qty-wrapper" data-state="active">
+                                        <div class="qty-inner">
+
+                                            <div class="js-button-less qty-btn qty-btn-less">
+                                                <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                            </div>
+
+                                            <div class="js-quantity-count qty-count">
+                                                <span class="qty-count-text">1</span>
+                                            </div>
+
+                                            <div class="js-button-add qty-btn qty-btn-add">
+                                                <div class="relative flex items-center justify-center">
+                                                    <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                                    <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-inner">
+
+                                <div class="w-20 sm:w-28 h-full shrink-0 rounded-xl overflow-hidden">
+                                    <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
+                                        class="w-full h-full object-cover">
+                                </div>
+
+                                <div
+                                    class="w-full flex flex-col pl-4 pr-2.5 items-end sm:items-center gap-1  sm:flex-row justify-between">
+                                    <div class="flex flex-col w-full sm:w-auto">
+                                        <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La
+                                            Bombástica Choco-Chip</h3>
+                                        <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
+                                    </div>
+
+                                    <div class="js-quantity-control qty-wrapper" data-state="active">
+                                        <div class="qty-inner">
+
+                                            <div class="js-button-less qty-btn qty-btn-less">
+                                                <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                            </div>
+
+                                            <div class="js-quantity-count qty-count">
+                                                <span class="qty-count-text">1</span>
+                                            </div>
+
+                                            <div class="js-button-add qty-btn qty-btn-add">
+                                                <div class="relative flex items-center justify-center">
+                                                    <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                                    <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-inner">
+
+                                <div class="w-20 sm:w-28 h-full shrink-0 rounded-xl overflow-hidden">
+                                    <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
+                                        class="w-full h-full object-cover">
+                                </div>
+
+                                <div
+                                    class="w-full flex flex-col pl-4 pr-2.5 items-end sm:items-center gap-1  sm:flex-row justify-between">
+                                    <div class="flex flex-col w-full sm:w-auto">
+                                        <h3 class="text-stone-800 text-base font-normal leading-6 truncate w-11/12">La
+                                            Bombástica Choco-Chip</h3>
+                                        <p class="text-stone-800 text-lg font-bold leading-5">Gs 12.000</p>
+                                    </div>
+
+                                    <div class="js-quantity-control qty-wrapper" data-state="active">
+                                        <div class="qty-inner">
+
+                                            <div class="js-button-less qty-btn qty-btn-less">
+                                                <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                            </div>
+
+                                            <div class="js-quantity-count qty-count">
+                                                <span class="qty-count-text">1</span>
+                                            </div>
+
+                                            <div class="js-button-add qty-btn qty-btn-add">
+                                                <div class="relative flex items-center justify-center">
+                                                    <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
+                                                    <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w-full flex flex-col flex-1 justify-end gap-8">
+                    <div class="w-full flex flex-col items-end px-10 py-6 shadow-sm bg-white/70 rounded-3xl">
+
+                        <div class="w-full flex flex-col gap-4">
+                            <div class="w-full flex flex-col gap-2">
+                                <div class="w-full flex justify-between items-start">
+                                    <span class="text-neutral-800 text-md font-semibold">Subtotal</span>
+                                    <span class="text-neutral-800 text-md font-semibold">Gs 48.000</span>
+                                </div>
+                                <div class="w-full flex justify-between items-start">
+                                    <span class="text-neutral-800 text-md font-semibold">Delivery</span>
+                                    <span class="text-neutral-800 text-md font-semibold">Gs 15.000</span>
+                                </div>
+                            </div>
+                            <div class="w-full pt-6 border-t border-orange-400/20 flex justify-between items-start">
+                                <span class="text-neutral-800 text-xl font-bold">TOTAL</span>
+                                <span class="text-neutral-800 text-xl font-bold">Gs 63.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary text-2xl">Enviar Pedido</button>
+                </div>
+            </div>
         </aside>
         <div class="js-overlay inset-0 fixed bg-zinc-950/40 backdrop-blur-xs z-40 
-            opacity-0 pointer-events-none transition-opacity duration-300" 
-            data-state="closed">
+            opacity-0 pointer-events-none transition-opacity duration-300" data-state="closed">
         </div>
     </header>
     <main>
 
-        <section class="w-full h-[calc(100dvh-80px)] bg-[url('../img/hero-bg.jpg')] bg-cover bg-center">
+        <section class="w-full h-screen bg-[url('../img/hero-bg.jpg')] bg-cover bg-center pt-20">
             <div class="container h-full mx-auto flex items-center px-4 sm:px-0">
                 <div class="w-full md:w-3/5 lg:w-1/2 flex items-start flex-col">
                     <h1 class="text-6xl md:text-7xl lg:text-8xl font-header uppercase text-amber-950 mb-8 font-bold">
@@ -224,43 +250,37 @@
             <div class="container mx-auto px-4 sm:px-0">
                 <h2 class="font-header text-amber-950 text-5xl uppercase font-bold text-center">Nuestros Productos</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-16">
-                    
-                    <div
-                        class="card-product">
-                        
+
+                    <div class="card-product">
+
                         <div class="h-52 w-full rounded-xl bg-slate-200 overflow-hidden">
                             <img src="./src/img/galleta-1.png" alt="Galleta Bombástica Choco-Chip"
                                 class="w-full h-full object-cover">
                         </div>
-                        
+
                         <div class="flex w-full flex-col items-end px-4 justify-end">
                             <div class="flex flex-col w-full items-start">
                                 <h3 class="text-lg leading-8 text-neutral-800">La Bombástica Choco-Chip</h3>
                                 <p class="text-2xl font-black leading-7 text-neutral-800">Gs 12.000</p>
                             </div>
 
-                            
-                            <div class="js-quantity-control qty-wrapper"
-                                data-state="default">
-                                <div
-                                    class="qty-inner">
 
-                                    
-                                    <div
-                                        class="js-button-less qty-btn qty-btn-less">
+                            <div class="js-quantity-control qty-wrapper" data-state="default">
+                                <div class="qty-inner">
+
+
+                                    <div class="js-button-less qty-btn qty-btn-less">
                                         <div class="h-0.5 w-3 rounded-full bg-stone-800">
                                         </div>
                                     </div>
 
-                                    
+
                                     <div class="js-quantity-count qty-count">
-                                        <span
-                                            class="qty-count-text">1</span>
+                                        <span class="qty-count-text">1</span>
                                     </div>
 
-                                    
-                                    <div
-                                        class="js-button-add qty-btn qty-btn-add">
+
+                                    <div class="js-button-add qty-btn qty-btn-add">
                                         <div class="relative flex items-center justify-center">
                                             <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
                                             <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
@@ -270,43 +290,37 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    <div
-                        class="card-product">
-                        
+
+
+                    <div class="card-product">
+
                         <div class="h-52 w-full rounded-xl bg-slate-200 overflow-hidden">
                             <img src="./src/img/galleta-2.png" alt="La Locura de Pistacho"
                                 class="w-full h-full object-cover">
                         </div>
-                        
+
                         <div class="flex w-full flex-col items-end px-4 justify-end">
                             <div class="flex flex-col w-full items-start">
                                 <h3 class="text-lg leading-8 text-neutral-800">La Locura de Pistacho</h3>
                                 <p class="text-2xl font-black leading-7 text-neutral-800">Gs 15.000</p>
                             </div>
 
-                            
-                            <div class="js-quantity-control qty-wrapper"
-                                data-state="default">
-                                <div
-                                    class="qty-inner">
 
-                                    
-                                    <div
-                                        class="js-button-less qty-btn qty-btn-less">
+                            <div class="js-quantity-control qty-wrapper" data-state="default">
+                                <div class="qty-inner">
+
+
+                                    <div class="js-button-less qty-btn qty-btn-less">
                                         <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
                                     </div>
 
-                                    
+
                                     <div class="js-quantity-count qty-count">
-                                        <span
-                                            class="qty-count-text">1</span>
+                                        <span class="qty-count-text">1</span>
                                     </div>
 
-                                    
-                                    <div
-                                        class="js-button-add qty-btn qty-btn-add">
+
+                                    <div class="js-button-add qty-btn qty-btn-add">
                                         <div class="relative flex items-center justify-center">
                                             <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
                                             <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
@@ -316,43 +330,37 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    <div
-                        class="card-product">
-                        
+
+
+                    <div class="card-product">
+
                         <div class="h-52 w-full rounded-xl bg-slate-200 overflow-hidden">
                             <img src="./src/img/galleta-3.png" alt="La Explosión de Manzana y Canela"
                                 class="w-full h-full object-cover">
                         </div>
-                        
+
                         <div class="flex w-full flex-col items-end px-4 justify-end">
                             <div class="flex flex-col w-full items-start">
                                 <h3 class="text-lg leading-8 text-neutral-800">La Explosión de Manzana y Canela</h3>
                                 <p class="text-2xl font-black leading-7 text-neutral-800">Gs 12.000</p>
                             </div>
 
-                            
-                            <div class="js-quantity-control qty-wrapper"
-                                data-state="default">
-                                <div
-                                    class="qty-inner">
 
-                                    
-                                    <div
-                                        class="js-button-less qty-btn qty-btn-less">
+                            <div class="js-quantity-control qty-wrapper" data-state="default">
+                                <div class="qty-inner">
+
+
+                                    <div class="js-button-less qty-btn qty-btn-less">
                                         <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
                                     </div>
 
-                                    
+
                                     <div class="js-quantity-count qty-count">
-                                        <span
-                                            class="qty-count-text">1</span>
+                                        <span class="qty-count-text">1</span>
                                     </div>
 
-                                    
-                                    <div
-                                        class="js-button-add qty-btn qty-btn-add">
+
+                                    <div class="js-button-add qty-btn qty-btn-add">
                                         <div class="relative flex items-center justify-center">
                                             <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
                                             <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
@@ -362,43 +370,37 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    <div
-                        class="card-product">
-                        
+
+
+                    <div class="card-product">
+
                         <div class="h-52 w-full rounded-xl bg-slate-200 overflow-hidden">
                             <img src="./src/img/galleta-4.png" alt="La Rebelión de la Avena"
                                 class="w-full h-full object-cover">
                         </div>
-                        
+
                         <div class="flex w-full flex-col items-end px-4 justify-end">
                             <div class="flex flex-col w-full items-start">
                                 <h3 class="text-lg leading-8 text-neutral-800">La Rebelión de la Avena</h3>
                                 <p class="text-2xl font-black leading-7 text-neutral-800">Gs 12.000</p>
                             </div>
 
-                            
-                            <div class="js-quantity-control qty-wrapper"
-                                data-state="default">
-                                <div
-                                    class="qty-inner">
 
-                                    
-                                    <div
-                                        class="js-button-less qty-btn qty-btn-less">
+                            <div class="js-quantity-control qty-wrapper" data-state="default">
+                                <div class="qty-inner">
+
+
+                                    <div class="js-button-less qty-btn qty-btn-less">
                                         <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
                                     </div>
 
-                                    
+
                                     <div class="js-quantity-count qty-count">
-                                        <span
-                                            class="qty-count-text">1</span>
+                                        <span class="qty-count-text">1</span>
                                     </div>
 
-                                    
-                                    <div
-                                        class="js-button-add qty-btn qty-btn-add">
+
+                                    <div class="js-button-add qty-btn qty-btn-add">
                                         <div class="relative flex items-center justify-center">
                                             <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
                                             <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
@@ -408,43 +410,37 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    <div
-                        class="card-product">
-                        
+
+
+                    <div class="card-product">
+
                         <div class="h-52 w-full rounded-xl bg-slate-200 overflow-hidden">
                             <img src="./src/img/galleta-5.png" alt="La Tentación de Caramelo Salado"
                                 class="w-full h-full object-cover">
                         </div>
-                        
+
                         <div class="flex w-full flex-col items-end px-4 justify-end">
                             <div class="flex flex-col w-full items-start">
                                 <h3 class="text-lg leading-8 text-neutral-800">La Tentación de Caramelo Salado</h3>
                                 <p class="text-2xl font-black leading-7 text-neutral-800">Gs 12.000</p>
                             </div>
 
-                            
-                            <div class="js-quantity-control qty-wrapper"
-                                data-state="default">
-                                <div
-                                    class="qty-inner">
 
-                                    
-                                    <div
-                                        class="js-button-less qty-btn qty-btn-less">
+                            <div class="js-quantity-control qty-wrapper" data-state="default">
+                                <div class="qty-inner">
+
+
+                                    <div class="js-button-less qty-btn qty-btn-less">
                                         <div class="h-0.5 w-3 rounded-full bg-stone-800"></div>
                                     </div>
 
-                                    
+
                                     <div class="js-quantity-count qty-count">
-                                        <span
-                                            class="qty-count-text">1</span>
+                                        <span class="qty-count-text">1</span>
                                     </div>
 
-                                    
-                                    <div
-                                        class="js-button-add qty-btn qty-btn-add">
+
+                                    <div class="js-button-add qty-btn qty-btn-add">
                                         <div class="relative flex items-center justify-center">
                                             <div class="absolute h-0.5 w-3 rounded-full bg-stone-800"></div>
                                             <div class="absolute h-3 w-0.5 rounded-full bg-stone-800"></div>
@@ -454,20 +450,20 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
 
-        
+
         <section id="como-comprar" class="w-full bg-rose-50">
             <div class="container mx-auto px-4 sm:px-0">
                 <div class="flex flex-col justify-start items-center overflow-hidden">
                     <div class="w-full h-auto py-24 flex flex-col justify-center items-center gap-16 overflow-hidden">
-                        <div class="text-amber-950 text-5xl font-bold font-header uppercase">
-                            ¿Cómo hago mi Pedido?</div>
+                        <h3 class="text-amber-950 text-4xl sm:text-5xl font-bold font-header uppercase text-center">
+                            ¿Cómo hago mi Pedido?</h3>
                         <div class="flex flex-col md:flex-row justify-center items-start gap-6">
-                            
+
                             <div
                                 class="w-full pl-8 pr-10 py-10 bg-white rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-5">
                                 <div
@@ -485,7 +481,7 @@
                                         Seleccioná las cookies que más te gustan y agregalas al carrito.</div>
                                 </div>
                             </div>
-                            
+
                             <div
                                 class="w-full pl-8 pr-10 py-10 bg-white rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-5">
                                 <div
@@ -503,7 +499,7 @@
                                         Revisá en el carrito los productos que cargaste y enviá tu pedido.</div>
                                 </div>
                             </div>
-                            
+
                             <div
                                 class="w-full pl-8 pr-10 py-10 bg-white rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-5">
                                 <div
@@ -523,7 +519,7 @@
                             </div>
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -532,7 +528,7 @@
     </main>
 
     <footer class="w-full bg-amber-950">
-        
+
         <div class="container mx-auto flex flex-col items-center py-12 gap-6 px-4 sm:px-0">
             <div class="flex items-center">
                 <img src="src/img/logo.svg" alt="Logo de la marca">
