@@ -4,6 +4,12 @@ const cartBtn = document.querySelector('a[href="#"] img[src*="carrito"]').parent
 const cartMenu = document.querySelector('aside');
 const overlay = document.querySelector('.js-overlay');
 const closeBtn = cartMenu.querySelector('button');
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+
+btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
 
 quantityControls.forEach(control => {
     let quantity = 0;
